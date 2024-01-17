@@ -1,2 +1,1 @@
 # AdatBazisProjekt
-Balatoni hajók
