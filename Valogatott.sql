@@ -3,7 +3,20 @@
 CREATE DATABASE Valogatott 
 DEFAULT CHARACTER SET utf8
 COLLATE utf8_hungarian_ci;
- use Valogatott;create table merkozes(id int(11)  ,datum date  ,ido time  ,varos varchar(100)  ,stadion varchar(100)  ,nezoszam int(11)  ,ellenfel varchar(100)  ,lott int(11)  ,kapott int(11)  ,tetmeccs varchar(100)  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
+
+use Valogatott;
+create table merkozes (
+  id int(11),
+  datum date,
+  ido time,
+  varos varchar(100),
+  stadion varchar(100),
+  nezoszam int(11),
+  ellenfel varchar(100),
+  lott int(11),
+  kapott int(11),
+  tetmeccs varchar(100) 
+);
  
 ALTER TABLE merkozes ADD PRIMARY KEY(id);
  INSERT INTO merkozes VALUES
@@ -916,7 +929,12 @@ ALTER TABLE merkozes ADD PRIMARY KEY(id);
 ( 907,"2016-06-18","18:00:00","Marseille","Stade Vélodrome",60842,"Izland",1,1,"EB-2016"),
 ( 908,"2016-06-22","18:00:00","Lyon","Stade des Lumiéres",55514,"Portugália",3,3,"EB-2016"),
 ( 909,"2016-06-26","21:00:00","Toulouse","Stadium Municipal",38921,"Belgium",0,4,"EB-2016");
-create table kapitany(id int(11)  ,nev varchar(100)  ,szuletett int(11)  ,elhunyt int(11)  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
+create table kapitany (
+  id int(11),
+  nev varchar(100),
+  szuletett int(11),
+  elhunyt int(11) 
+);
  
 ALTER TABLE kapitany ADD PRIMARY KEY(id);
  INSERT INTO kapitany VALUES
@@ -973,12 +991,17 @@ ALTER TABLE kapitany ADD PRIMARY KEY(id);
 ( 51,"VB - Baróti, Lakat, Sós",null,null),
 ( 52,"VB - Sebes, Kléber, Mandik",null,null),
 ( 53,"Verebes József",1941,2016);
-create table megbizas(id int(11)  ,kapitanyid int(11)  ,elso int(11)  ,utolso int(11)  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
+create table megbizas (
+  id int(11),
+  kapitanyid int(11),
+  elso int(11),
+  utolso int(11)
+);
 
- ALTER TABLE megbizas ADD INDEX(kapitanyid);
+ALTER TABLE megbizas ADD INDEX(kapitanyid);
 ALTER TABLE megbizas ADD PRIMARY KEY(id);
 
- INSERT INTO megbizas VALUES
+INSERT INTO megbizas VALUES
 ( 1,18,1,4),
 ( 2,45,5,8),
 ( 3,21,9,10),
@@ -1048,7 +1071,7 @@ ALTER TABLE megbizas ADD PRIMARY KEY(id);
 ( 67,41,885,889),
 ( 68,9,890,896),
 ( 69,46,897,912);
-ALTER TABLE `megbizas` ADD CONSTRAINT `megbizas_1`   FOREIGN KEY (`kapitanyid`)     REFERENCES `kapitany` (`id`);
+ALTER TABLE `megbizas` ADD CONSTRAINT `megbizas_1` FOREIGN KEY (`kapitanyid`) REFERENCES `kapitany` (`id`);
 
 
 -- 2.
