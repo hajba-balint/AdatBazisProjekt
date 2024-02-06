@@ -4,8 +4,9 @@ CREATE DATABASE Valogatott
 DEFAULT CHARACTER SET utf8
 COLLATE utf8_hungarian_ci;
 
-use Valogatott;
-create table merkozes (
+USE Valogatott;
+
+CREATE TABLE merkozes (
   id int(11),
   datum date,
   ido time,
@@ -929,7 +930,7 @@ ALTER TABLE merkozes ADD PRIMARY KEY(id);
 ( 907,"2016-06-18","18:00:00","Marseille","Stade Vélodrome",60842,"Izland",1,1,"EB-2016"),
 ( 908,"2016-06-22","18:00:00","Lyon","Stade des Lumiéres",55514,"Portugália",3,3,"EB-2016"),
 ( 909,"2016-06-26","21:00:00","Toulouse","Stadium Municipal",38921,"Belgium",0,4,"EB-2016");
-create table kapitany (
+CREATE TABLE kapitany (
   id int(11),
   nev varchar(100),
   szuletett int(11),
@@ -991,7 +992,7 @@ ALTER TABLE kapitany ADD PRIMARY KEY(id);
 ( 51,"VB - Baróti, Lakat, Sós",null,null),
 ( 52,"VB - Sebes, Kléber, Mandik",null,null),
 ( 53,"Verebes József",1941,2016);
-create table megbizas (
+CREATE TABLE megbizas (
   id int(11),
   kapitanyid int(11),
   elso int(11),
