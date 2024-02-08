@@ -6,6 +6,19 @@ A mellékelt három – tabulátorokkal tagolt, UTF-8 kódolású – szöveges 
 `kapitany.txt`) importálja az adatbázisba a fájlnévvel azonos néven (**merkozes**,
 **megbizas**, **kapitany**)! A létrehozás során állítsa be a megfelelő típusokat és az elsődleges kulcsokat!
 
+| Név | Típus | Leírás |
+| :-: | :---: | :----: |
+| id  | int   | A mérkőzés azonosítója, ez a kulcs |
+| datum | date | A mérkőzés dátuma |
+| ido | time | A mérkőzés kezdési ideje |
+| varos | varchar | A város, ahol a mérkőzést játszották |
+| stadion | varchar | A stadion, ahol a mérkőzést játszották |
+| nezoszam | int | A mérkőzés nézőszáma |
+| ellenfel | varchar | A mérkőzésen a magyar válogatott ellenfele |
+| lott | int | A mérkőzésen a magyar válogatott által lőtt gólok száma |
+| kapott | int | A mérkőzésen a magyar válogatott által kapott gólok száma  |
+| tetmeccs | varchar | Megadja, hogy a mérkőzés milyen tétmeccs volt |
+
 ![táblák](diagram.png)
 
 ## 2. feladat
