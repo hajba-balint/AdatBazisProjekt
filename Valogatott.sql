@@ -1095,4 +1095,16 @@ WHERE datum>2001;
 -- 5.
 SELECT datum, varos, lott, kapott
 FROM merkozes
-WHERE ellenfel LIKE 'Ausztria' AND (lott-kapott)>=5 OR (kapott-lott)>=5 ;
+WHERE ellenfel LIKE 'Ausztria' AND (lott-kapott)>=5 OR (kapott-lott)>=5;
+
+-- 6.
+SELECT ellenfel
+FROM merkozesek
+WHERE lott>kapott;
+
+-- 7.
+SELECT datum, ellenfel, lott, kapott, kapitanyid
+FROM merkozesek
+  INNER JOIN megbizasok
+  ON kapitanyid=3
+WHERE datum <= elso AND datum >= utolso;
