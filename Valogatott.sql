@@ -6,7 +6,7 @@ COLLATE utf8_hungarian_ci;
 
 USE Valogatott;
 
-CREATE TABLE merkozes (
+CREATE TABLE merkozesek (
   id int(11),
   datum date,
   ido time,
@@ -19,8 +19,8 @@ CREATE TABLE merkozes (
   tetmeccs varchar(100) 
 );
  
-ALTER TABLE merkozes ADD PRIMARY KEY(id);
- INSERT INTO merkozes VALUES
+ALTER TABLE merkozesek ADD PRIMARY KEY(id);
+ INSERT INTO merkozesek VALUES
 ( 1,"1902-10-12",null,"Bécs",null,500,"Ausztria",0,5,null),
 ( 2,"1903-04-05",null,"Budapest","Csömöri út",750,"Csehország",2,1,null),
 ( 3,"1903-06-11","16:30:00","Budapest","Margitsziget",700,"Ausztria",3,2,null),
@@ -930,15 +930,15 @@ ALTER TABLE merkozes ADD PRIMARY KEY(id);
 ( 907,"2016-06-18","18:00:00","Marseille","Stade Vélodrome",60842,"Izland",1,1,"EB-2016"),
 ( 908,"2016-06-22","18:00:00","Lyon","Stade des Lumiéres",55514,"Portugália",3,3,"EB-2016"),
 ( 909,"2016-06-26","21:00:00","Toulouse","Stadium Municipal",38921,"Belgium",0,4,"EB-2016");
-CREATE TABLE kapitany (
+CREATE TABLE kapitanyok (
   id int(11),
   nev varchar(100),
   szuletett int(11),
   elhunyt int(11) 
 );
  
-ALTER TABLE kapitany ADD PRIMARY KEY(id);
- INSERT INTO kapitany VALUES
+ALTER TABLE kapitanyok ADD PRIMARY KEY(id);
+ INSERT INTO kapitanyok VALUES
 ( 1,"Bálint László",1948,null),
 ( 2,"Baróti Lajos",1914,2005),
 ( 3,"Bicskei Bertalan",1944,2011),
@@ -992,17 +992,17 @@ ALTER TABLE kapitany ADD PRIMARY KEY(id);
 ( 51,"VB - Baróti, Lakat, Sós",null,null),
 ( 52,"VB - Sebes, Kléber, Mandik",null,null),
 ( 53,"Verebes József",1941,2016);
-CREATE TABLE megbizas (
+CREATE TABLE megbizasok (
   id int(11),
-  kapitanyid int(11),
+  kapitanyokid int(11),
   elso int(11),
   utolso int(11)
 );
 
-ALTER TABLE megbizas ADD INDEX(kapitanyid);
-ALTER TABLE megbizas ADD PRIMARY KEY(id);
+ALTER TABLE megbizasok ADD INDEX(kapitanyokid);
+ALTER TABLE megbizasok ADD PRIMARY KEY(id);
 
-INSERT INTO megbizas VALUES
+INSERT INTO megbizasok VALUES
 ( 1,18,1,4),
 ( 2,45,5,8),
 ( 3,21,9,10),
@@ -1072,39 +1072,50 @@ INSERT INTO megbizas VALUES
 ( 67,41,885,889),
 ( 68,9,890,896),
 ( 69,46,897,912);
-ALTER TABLE `megbizas` ADD CONSTRAINT `megbizas_1` FOREIGN KEY (`kapitanyid`) REFERENCES `kapitany` (`id`);
-
+ALTER TABLE `megbizasok` ADD CONSTRAINT `megbizasok_1` FOREIGN KEY (`kapitanyokid`) REFERENCES `kapitanyok` (`id`);
 
 -- 2.
-SELECT id, datum, varos, stadion, nezoszam, ellenfel, lott, kapott, tetmeccs
-FROM  merkozes
-WHERE tetmeccs LIKE '%vb%';
+INSERT INTO merkozesek VALUE
+(910, "2016.09.06", null,"Tórshavn", "Tórsvøllur", 15000, "Feröer", 0, 0, "VB-sel-2016");
 
 -- 3.
-SELECT nev
-FROM kapitany
-  INNER JOIN  megbizas
-    ON kapitany.id = megbizas.kapitanyid
-WHERE megbizas.elso<500 AND megbizas.utolso>500;
+UPDATE merkozesek SET lott = 1
+WHERE id = 909;
 
 -- 4.
-SELECT datum, ellenfel, MAX(nezoszam)
-FROM merkozes
-WHERE datum>2001;
+DELETE FROM merkozesek WHERE
+lott=kapott;
 
 -- 5.
-SELECT datum, varos, lott, kapott
-FROM merkozes
-WHERE ellenfel LIKE 'Ausztria' AND (lott-kapott)>=5 OR (kapott-lott)>=5;
+SELECT id, datum, varos, stadion, nezoszam, ellenfel, lott, kapott, tetmeccs
+FROM  merkozesek
+WHERE tetmeccs LIKE '%vb%';
 
 -- 6.
+SELECT nev
+FROM kapitanyok
+  INNER JOIN  megbizasok
+    ON kapitanyok.id = megbizasok.kapitanyokid
+WHERE megbizasok.elso<500 AND megbizasok.utolso>500;
+
+-- 7.
+SELECT datum, ellenfel, MAX(nezoszam)
+FROM merkozesek
+WHERE datum>2001;
+
+-- 8.
+SELECT datum, varos, lott, kapott
+FROM merkozesek
+WHERE ellenfel LIKE 'Ausztria' AND (lott-kapott)>=5 OR (kapott-lott)>=5;
+
+-- 9.
 SELECT ellenfel
 FROM merkozesek
 WHERE lott>kapott;
 
--- 7.
-SELECT datum, ellenfel, lott, kapott, kapitanyid
+-- 10.
+SELECT datum, ellenfel, lott, kapott, kapitanyokid
 FROM merkozesek
   INNER JOIN megbizasok
-  ON kapitanyid=3
+  ON kapitanyokid=3
 WHERE datum <= elso AND datum >= utolso;
