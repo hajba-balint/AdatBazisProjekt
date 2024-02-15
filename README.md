@@ -36,6 +36,7 @@ A mellékelt három – tabulátorokkal tagolt, UTF-8 kódolású – szöveges 
 | szuletett | int     | A szövetségi kapitány születési éve                                  |
 | elhunyt   | int     | A szövetségi kapitány halálozási éve                                 |
 
+### Az adatbázis diagramja
 ![táblák](diagram.png)
 
 ## 2. feladat
