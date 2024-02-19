@@ -82,8 +82,8 @@ legyőzött a magyar válogatott! Minden érintett ellenfél neve egyszer jelenj
 (***6mindig***)
 
 ## 10. feladat
-Készítsen jelentést, amely kilistázza a magyar válogatott Bicskei Bertalan irányítása mellett
+Készítsen lekérdezést, amely kilistázza a magyar válogatott Bicskei Bertalan irányítása mellett
 játszott mérkőzéseit! A mérkőzéseket évenként csoportosítva jelenítse
 meg, szövegszerű tartalmát tekintve
 pedig az alábbi minta legyen a meghatározó! Biztosítsa, hogy minden
-érték látható legyen! A jelentést lekérdezéssel készítse elő! (***7bicskei***)
+érték látható legyen! (***7bicskei***)
