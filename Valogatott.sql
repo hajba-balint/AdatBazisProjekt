@@ -18,6 +18,20 @@ CREATE TABLE merkozesek (
   kapott int(11),
   tetmeccs varchar(100) 
 );
+
+CREATE TABLE kapitanyok (
+  id int(11),
+  nev varchar(100),
+  szuletett int(11),
+  elhunyt int(11) 
+);
+
+CREATE TABLE megbizasok (
+  id int(11),
+  kapitanyokid int(11),
+  elso int(11),
+  utolso int(11)
+);
  
 ALTER TABLE merkozesek ADD PRIMARY KEY(id);
  INSERT INTO merkozesek VALUES
@@ -930,13 +944,7 @@ ALTER TABLE merkozesek ADD PRIMARY KEY(id);
 ( 907,"2016-06-18","18:00:00","Marseille","Stade Vélodrome",60842,"Izland",1,1,"EB-2016"),
 ( 908,"2016-06-22","18:00:00","Lyon","Stade des Lumiéres",55514,"Portugália",3,3,"EB-2016"),
 ( 909,"2016-06-26","21:00:00","Toulouse","Stadium Municipal",38921,"Belgium",0,4,"EB-2016");
-CREATE TABLE kapitanyok (
-  id int(11),
-  nev varchar(100),
-  szuletett int(11),
-  elhunyt int(11) 
-);
- 
+
 ALTER TABLE kapitanyok ADD PRIMARY KEY(id);
  INSERT INTO kapitanyok VALUES
 ( 1,"Bálint László",1948,null),
@@ -992,12 +1000,6 @@ ALTER TABLE kapitanyok ADD PRIMARY KEY(id);
 ( 51,"VB - Baróti, Lakat, Sós",null,null),
 ( 52,"VB - Sebes, Kléber, Mandik",null,null),
 ( 53,"Verebes József",1941,2016);
-CREATE TABLE megbizasok (
-  id int(11),
-  kapitanyokid int(11),
-  elso int(11),
-  utolso int(11)
-);
 
 ALTER TABLE megbizasok ADD INDEX(kapitanyokid);
 ALTER TABLE megbizasok ADD PRIMARY KEY(id);
