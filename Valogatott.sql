@@ -19,18 +19,18 @@ CREATE TABLE merkozesek (
   tetmeccs varchar(100) 
 );
 
-CREATE TABLE kapitanyok (
-  id int(11),
-  nev varchar(100),
-  szuletett int(11),
-  elhunyt int(11) 
-);
-
 CREATE TABLE megbizasok (
   id int(11),
   kapitanyokid int(11),
   elso int(11),
   utolso int(11)
+);
+
+CREATE TABLE kapitanyok (
+  id int(11),
+  nev varchar(100),
+  szuletett int(11),
+  elhunyt int(11) 
 );
  
 ALTER TABLE merkozesek ADD PRIMARY KEY(id);
@@ -945,62 +945,6 @@ ALTER TABLE merkozesek ADD PRIMARY KEY(id);
 ( 908,"2016-06-22","18:00:00","Lyon","Stade des Lumiéres",55514,"Portugália",3,3,"EB-2016"),
 ( 909,"2016-06-26","21:00:00","Toulouse","Stadium Municipal",38921,"Belgium",0,4,"EB-2016");
 
-ALTER TABLE kapitanyok ADD PRIMARY KEY(id);
- INSERT INTO kapitanyok VALUES
-( 1,"Bálint László",1948,null),
-( 2,"Baróti Lajos",1914,2005),
-( 3,"Bicskei Bertalan",1944,2011),
-( 4,"Bozsik József",1925,1978),
-( 5,"Bozsik Péter",1961,null),
-( 6,"Bukovi Márton",1904,1985),
-( 7,"Csábi József",1967,null),
-( 8,"Csank János",1946,null),
-( 9,"Dárdai Pál",1976,null),
-( 10,"Dietz Károly",1885,1969),
-( 11,"Egervári Sándor",1950,null),
-( 12,"Fábián József",null,null),
-( 13,"Fehéry Ákos",1883,1921),
-( 14,"Földessy János",1888,1965),
-( 15,"Gallowich Tibor",1900,1952),
-( 16,"Garami József",1939,null),
-( 17,"Gellei Imre",1950,null),
-( 18,"Gillemot Ferenc",1875,1916),
-( 19,"Ginzery Dénes",1885,1969),
-( 20,"Glázer Róbert",1950,null),
-( 21,"Hajós Alfréd",1878,1955),
-( 22,"Harsády József",1877,1942),
-( 23,"Herczog Ede",1880,1959),
-( 24,"Hoffer József",1922,2004),
-( 25,"Holits Ödön",1886,1970),
-( 26,"Illovszky Rudolf",1922,2008),
-( 27,"Jenei Imre",1937,null),
-( 28,"Kiss Gyula",1881,1959),
-( 29,"Koeman, Erwin",1961,null),
-( 30,"Komora Imre",1940,null),
-( 31,"Kovács Ferenc",1934,null),
-( 32,"Lakat Károly",1920,1988),
-( 33,"Máriássy Lajos",1888,1953),
-( 34,"Matthäus, Lothar",1961,null),
-( 35,"Mészöly Kálmán",1941,null),
-( 36,"Mezey György",1941,null),
-( 37,"Minder Frigyes",1880,1968),
-( 38,"Moór Ede",1919,1976),
-( 39,"Nádas Ödön",1891,1951),
-( 40,"Pataki Mihály",1893,1977),
-( 41,"Pintér Attila",1966,null),
-( 42,"Puskás Ferenc",1927,2006),
-( 43,"Sebes Gusztáv",1906,1986),
-( 44,"Sós Károly",1909,1991),
-( 45,"Stobbe Ferenc",1864,1916),
-( 46,"Storck, Bernd",1963,null),
-( 47,"Szőcs János",1933,null),
-( 48,"Tibor Lajos",1883,1950),
-( 49,"Vághy Kálmán",1897,1951),
-( 50,"Várhidi Péter",1958,null),
-( 51,"VB - Baróti, Lakat, Sós",null,null),
-( 52,"VB - Sebes, Kléber, Mandik",null,null),
-( 53,"Verebes József",1941,2016);
-
 ALTER TABLE megbizasok ADD INDEX(kapitanyokid);
 ALTER TABLE megbizasok ADD PRIMARY KEY(id);
 
@@ -1075,6 +1019,62 @@ INSERT INTO megbizasok VALUES
 ( 68,9,890,896),
 ( 69,46,897,912);
 ALTER TABLE `megbizasok` ADD CONSTRAINT `megbizasok_1` FOREIGN KEY (`kapitanyokid`) REFERENCES `kapitanyok` (`id`);
+
+ALTER TABLE kapitanyok ADD PRIMARY KEY(id);
+ INSERT INTO kapitanyok VALUES
+( 1,"Bálint László",1948,null),
+( 2,"Baróti Lajos",1914,2005),
+( 3,"Bicskei Bertalan",1944,2011),
+( 4,"Bozsik József",1925,1978),
+( 5,"Bozsik Péter",1961,null),
+( 6,"Bukovi Márton",1904,1985),
+( 7,"Csábi József",1967,null),
+( 8,"Csank János",1946,null),
+( 9,"Dárdai Pál",1976,null),
+( 10,"Dietz Károly",1885,1969),
+( 11,"Egervári Sándor",1950,null),
+( 12,"Fábián József",null,null),
+( 13,"Fehéry Ákos",1883,1921),
+( 14,"Földessy János",1888,1965),
+( 15,"Gallowich Tibor",1900,1952),
+( 16,"Garami József",1939,null),
+( 17,"Gellei Imre",1950,null),
+( 18,"Gillemot Ferenc",1875,1916),
+( 19,"Ginzery Dénes",1885,1969),
+( 20,"Glázer Róbert",1950,null),
+( 21,"Hajós Alfréd",1878,1955),
+( 22,"Harsády József",1877,1942),
+( 23,"Herczog Ede",1880,1959),
+( 24,"Hoffer József",1922,2004),
+( 25,"Holits Ödön",1886,1970),
+( 26,"Illovszky Rudolf",1922,2008),
+( 27,"Jenei Imre",1937,null),
+( 28,"Kiss Gyula",1881,1959),
+( 29,"Koeman, Erwin",1961,null),
+( 30,"Komora Imre",1940,null),
+( 31,"Kovács Ferenc",1934,null),
+( 32,"Lakat Károly",1920,1988),
+( 33,"Máriássy Lajos",1888,1953),
+( 34,"Matthäus, Lothar",1961,null),
+( 35,"Mészöly Kálmán",1941,null),
+( 36,"Mezey György",1941,null),
+( 37,"Minder Frigyes",1880,1968),
+( 38,"Moór Ede",1919,1976),
+( 39,"Nádas Ödön",1891,1951),
+( 40,"Pataki Mihály",1893,1977),
+( 41,"Pintér Attila",1966,null),
+( 42,"Puskás Ferenc",1927,2006),
+( 43,"Sebes Gusztáv",1906,1986),
+( 44,"Sós Károly",1909,1991),
+( 45,"Stobbe Ferenc",1864,1916),
+( 46,"Storck, Bernd",1963,null),
+( 47,"Szőcs János",1933,null),
+( 48,"Tibor Lajos",1883,1950),
+( 49,"Vághy Kálmán",1897,1951),
+( 50,"Várhidi Péter",1958,null),
+( 51,"VB - Baróti, Lakat, Sós",null,null),
+( 52,"VB - Sebes, Kléber, Mandik",null,null),
+( 53,"Verebes József",1941,2016);
 
 -- 2.
 INSERT INTO merkozesek VALUE
