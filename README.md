@@ -40,11 +40,11 @@ A mellékelt három – tabulátorokkal tagolt, UTF-8 kódolású – szöveges 
 ![táblák](diagram.png)
 
 ## 2. feladat
-Az adatbázis készítése óta játszódott egy meccs. Bővítse az adatbázist a 2016. 09. 06-án
+Az adatbázis elkészítése óta játszódott egy meccs. Bővítse az adatbázist a 2016. 09. 06-án
 játszódott focimeccs adataival!
 
 ## 3. feladat
-A 2. feladatban lévő meccs lejátszása után adtak meg mégegy pontot a magyar válogatottnak.
+A 2. feladatban lévő meccs lejátszása után adtak mégegy pontot a magyar válogatottnak.
 Módosítsa a lőtt gólok számát 1-re!
 
 ## 4. feladat
