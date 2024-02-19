@@ -8,7 +8,7 @@ A mellékelt három – tabulátorokkal tagolt, UTF-8 kódolású – szöveges 
 
 ### Táblák
 
-`**merkozesek**` (id, datum, ido, varos, stadion, nezoszam, ellenfel, lott, kapott, tetmeccs)
+**`merkozesek`** (id, datum, ido, varos, stadion, nezoszam, ellenfel, lott, kapott, tetmeccs)
 | Név          | Típus   | Leírás                                                     |
 | :-:          | :-----: | ---------------------------------------------------------- |
 | id           | int     | A mérkőzés azonosítója, ez a kulcs                         |
@@ -22,7 +22,7 @@ A mellékelt három – tabulátorokkal tagolt, UTF-8 kódolású – szöveges 
 | kapott       | int     | A mérkőzésen a magyar válogatott által kapott gólok száma  |
 | tetmeccs     | varchar | Megadja, hogy a mérkőzés milyen tétmeccs volt              |
 
-`**megbizasok**` (id, kapitanyid, elso, utolso)
+**`megbizasok`** (id, kapitanyid, elso, utolso)
 | Név | Típus | Leírás                                                                                                                                  |
 | :-: | :---: | --------------------------------------------------------------------------------------------------------------------------------------- |
 | id  | int   | A szövetségi kapitányi megbízás azonosítója, ez a kulcs                                                                                 |
@@ -30,7 +30,7 @@ A mellékelt három – tabulátorokkal tagolt, UTF-8 kódolású – szöveges 
 | elso | int | A mérkőzés azonosítója, egyúttal sorszáma, amelyen a megbízás először érvényes volt                                                      |
 | utolso | int | A mérkőzés azonosítója, egyúttal sorszáma, amelyen a megbízás utoljára érvényes volt                                                   |
 
-`**kapitanyok**` (id, nev, szuletett, elhunyt)
+**`kapitanyok`** (id, nev, szuletett, elhunyt)
 | Név       | Típus   | Leírás                                                               |
 | :-------: | :-----: | -------------------------------------------------------------------- |
 | id        | int     | A szövetségi kapitány azonosítója, ez a kulcs                        |
