@@ -55,7 +55,7 @@ Módosítsa a lőtt gólok számát 1-re!
 
 ## 4. feladat
 Az adatbázis nem szükséges focimeccseket is tartalmaz.
-Törölje az adatbázisból a barátságos mérkőzéseket!
+Törölje az adatbázisból a döntetlen mérkőzéseket!
 
 ![4. feladat](4feladat.png)
 
