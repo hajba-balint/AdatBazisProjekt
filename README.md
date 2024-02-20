@@ -45,19 +45,13 @@ A mellékelt három – tabulátorokkal tagolt, UTF-8 kódolású – szöveges 
 Az adatbázis elkészítése óta játszódott egy meccs. Bővítse az adatbázist a 2016. 09. 06-án
 játszódott focimeccs adataival!
 
-![2. feladat](2feladat.png)
-
 ## 3. feladat
 A 2. feladatban lévő meccs lejátszása után adtak mégegy pontot a magyar válogatottnak.
 Módosítsa a lőtt gólok számát 1-re!
 
-![3. feladat](3feladat.png)
-
 ## 4. feladat
 Az adatbázis nem szükséges focimeccseket is tartalmaz.
 Törölje az adatbázisból a döntetlen mérkőzéseket!
-
-![4. feladat](4feladat.png)
 
 ## 5. feladat
 A legrangosabb mérkőzések a VB, azaz a világbajnoksággal kapcsolatos meccsek.
