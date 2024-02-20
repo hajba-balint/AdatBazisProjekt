@@ -43,8 +43,18 @@ Futtassa a `Valogatott.sql` fájlt az adatbázis létrehozásához!
 ![táblák](diagram.png)
 
 ## 2. feladat
-Az adatbázis elkészítése óta játszódott egy meccs. Bővítse az adatbázist a 2016. 09. 06-án
-játszódott focimeccs adataival!
+Az adatbázis elkészítése óta játszódott egy meccs. Bővítse a **`merkozesek`** táblát az alábbi focimeccs adataival!
+
+`id: 910,`
+`datum: 2016.09.06,`
+`ido: null,`
+`varos: Tórshavn,`
+`stadion: Tórsvøllur,`
+`nezoszam: 15000,`
+`ellenfel: Feröer,`
+`lott: 0,`
+`kapott: 0,`
+`tetmeccs: VB-sel-2016`
 
 ## 3. feladat
 A 2. feladatban lévő meccs lejátszása után adtak mégegy pontot a magyar válogatottnak.
@@ -58,13 +68,13 @@ Törölje az adatbázisból a döntetlen mérkőzéseket!
 A legrangosabb mérkőzések a VB, azaz a világbajnoksággal kapcsolatos meccsek.
 Készítsen lekérdezést a ***tetmeccs*** mező felhasználásával, amely megjeleníti ezen
 mérkőzések összes adatát! (Például az 1938-as világbajnoki selejtező *VB-sel-1938*
-jelölésű.) (***2vb***)
+jelölésű.)
 
 ![5. feladat](5feladat.png)
 
 ## 6. feladat
 Készítsen lekérdezést, amely megadja, hogy az 500. mérkőzésen ki volt a válogatott
-szövetségi kapitánya! Csak a nevet jelenítse meg! (***3500***)
+szövetségi kapitánya! Csak a nevet jelenítse meg!
 
 ![6. feladat](6feladat.png)
 
@@ -72,7 +82,7 @@ szövetségi kapitánya! Csak a nevet jelenítse meg! (***3500***)
 Készítsen lekérdezést, amely megadja, hogy ebben az évezredben (2001-től) mely ország
 válogatottja ellen játszott a legtöbb néző előtt tétmérkőzést a magyar csapat! Jelenítse meg
 a dátumot, az ellenfél nevét és a nézők számát! Ha több ilyen van, akkor elegendő csak
-egyet megjeleníteni. (***4legtobb***)
+egyet megjeleníteni.
 
 ![7. feladat](7feladat.png)
 
@@ -81,14 +91,12 @@ Ausztria általában hasonló játékerőt képviselt, mint a magyar csapat, mé
 az eredményben nagy különbség mutatkozott. Készítsen lekérdezést, amely kilistázza
 azokat a magyar-osztrák mérkőzéseket, amelyeken legalább 5 gól különbséggel nyert
 valamelyik csapat! A dátum, a város, a lőtt és a kapott gólok száma jelenjen meg!
-(***5ausztria***)
 
 ![8. feladat](8feladat.png)
 
 ## 9. feladat
 Készítsen lekérdezést, amely megadja az eddigi ellenfelek közül azokat, amelyeket mindig
 legyőzött a magyar válogatott! Minden érintett ellenfél neve egyszer jelenjen meg!
-(***6mindig***)
 
 ![9. feladat](9feladat.png)
 
@@ -97,7 +105,7 @@ Készítsen lekérdezést, amely kilistázza a magyar válogatott Bicskei Bertal
 játszott mérkőzéseit! A mérkőzéseket évenként csoportosítva jelenítse
 meg, szövegszerű tartalmát tekintve
 pedig az alábbi minta legyen a meghatározó! Biztosítsa, hogy minden
-érték látható legyen! (***7bicskei***)
+érték látható legyen!
 
 ![10. feladat](10feladat.png)
 
