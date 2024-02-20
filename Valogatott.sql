@@ -1018,7 +1018,6 @@ INSERT INTO megbizasok VALUES
 ( 67,41,885,889),
 ( 68,9,890,896),
 ( 69,46,897,912);
-ALTER TABLE `megbizasok` ADD CONSTRAINT `megbizasok_1` FOREIGN KEY (`kapitanyokid`) REFERENCES `kapitanyok` (`id`);
 
 ALTER TABLE kapitanyok ADD PRIMARY KEY(id);
  INSERT INTO kapitanyok VALUES
@@ -1075,3 +1074,7 @@ ALTER TABLE kapitanyok ADD PRIMARY KEY(id);
 ( 51,"VB - Baróti, Lakat, Sós",null,null),
 ( 52,"VB - Sebes, Kléber, Mandik",null,null),
 ( 53,"Verebes József",1941,2016);
+
+
+ALTER TABLE `megbizasok` ADD CONSTRAINT `megbizasok_1` FOREIGN KEY (`kapitanyokid`) REFERENCES `kapitanyok` (`id`);
+
