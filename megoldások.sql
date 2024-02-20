@@ -1,4 +1,4 @@
--- A feladatok megoldására elkészített SQL parancsokat illessze be a feladat sorszáma után!
+﻿-- A feladatok megoldására elkészített SQL parancsokat illessze be a feladat sorszáma után!
 
 -- 2. feladat:
 INSERT INTO merkozesek VALUE
@@ -27,7 +27,7 @@ WHERE megbizasok.elso<500 AND megbizasok.utolso>500;
 -- 7. feladat:
 SELECT datum, ellenfel, MAX(nezoszam)
 FROM merkozesek
-WHERE datum>2001;
+WHERE datum>'2001-01-01';
 
 -- 8. feladat:
 SELECT datum, varos, lott, kapott
