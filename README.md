@@ -101,4 +101,4 @@ pedig az alábbi minta legyen a meghatározó! Biztosítsa, hogy minden
 ![10. feladat](10feladat.png)
 
 # Eredeti feladat:
-![file](valogatott.pdf)
+[Válogatott.pdf](valogatott.pdf)
