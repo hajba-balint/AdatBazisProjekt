@@ -1,10 +1,11 @@
 # 3. Válogatott
+A magyar labdarúgó-válogatott az 1902-es első pályára lépésétől kezdve sok szép sikert ért
+el. A csapatot kezdetben csak összeállította, később már szakmailag is irányította a megbízott
+szövetségi kapitány. Ebben az adatbázisban a 2016-os Európa-bajnokság végével bezárólag
+szerepelnek a magyar válogatott mérkőzései és szövetségi kapitányai. 
 
 ## 1. feladat
-Készítsen új adatbázist `valogatott` néven!
-A mellékelt három – tabulátorokkal tagolt, UTF-8 kódolású – szöveges állományt (`merkozes.txt`, `megbizas.txt`,
-`kapitany.txt`) importálja az adatbázisba (**merkozesek**,
-**megbizasok**, **kapitanyok**)! A létrehozás során állítsa be a megfelelő típusokat és az elsődleges kulcsokat!
+Futtassa a `Valogatott.sql` fájlt!
 
 ### Táblák
 
