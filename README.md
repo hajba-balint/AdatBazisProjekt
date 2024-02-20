@@ -1,4 +1,4 @@
-# 3. Válogatott
+# Válogatott
 A magyar labdarúgó-válogatott az 1902-es első pályára lépésétől kezdve sok szép sikert ért
 el. A csapatot kezdetben csak összeállította, később már szakmailag is irányította a megbízott
 szövetségi kapitány. Ebben az adatbázisban a 2016-os Európa-bajnokság végével bezárólag
