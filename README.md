@@ -100,5 +100,6 @@ pedig az alábbi minta legyen a meghatározó! Biztosítsa, hogy minden
 
 ![10. feladat](10feladat.png)
 
-# Eredeti feladat:
+#
+Eredeti feladat:
 [Válogatott.pdf](valogatott.pdf)
