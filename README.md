@@ -11,7 +11,7 @@ Futtassa a `Valogatott.sql` fájlt az adatbázis létrehozásához!
 
 **`merkozesek`** (id, datum, ido, varos, stadion, nezoszam, ellenfel, lott, kapott, tetmeccs)
 | Név          | Típus   | Leírás                                                     |
-| :-:          | :-----: | ---------------------------------------------------------- |
+| ------------ | ------- | ---------------------------------------------------------- |
 | id           | int     | A mérkőzés azonosítója, ez a kulcs                         |
 | datum        | date    | A mérkőzés dátuma                                          |
 | ido          | time    | A mérkőzés kezdési ideje                                   |
@@ -24,20 +24,20 @@ Futtassa a `Valogatott.sql` fájlt az adatbázis létrehozásához!
 | tetmeccs     | varchar | Megadja, hogy a mérkőzés milyen tétmeccs volt              |
 
 **`megbizasok`** (id, kapitanyid, elso, utolso)
-| Név | Típus | Leírás                                                                                                                                  |
-| :-: | :---: | --------------------------------------------------------------------------------------------------------------------------------------- |
-| id  | int   | A szövetségi kapitányi megbízás azonosítója, ez a kulcs                                                                                 |
-| kapitanyokid | int | Annak a szövetségi kapitánynak vagy válogató bizottságnak az azonosítója, akit megbíztak egy időre a válogatott összeállításával |
-| elso | int | A mérkőzés azonosítója, egyúttal sorszáma, amelyen a megbízás először érvényes volt                                                      |
-| utolso | int | A mérkőzés azonosítója, egyúttal sorszáma, amelyen a megbízás utoljára érvényes volt                                                   |
+| Név          | Típus   | Leírás                                                                                                                           |
+| ------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| id           | int     | A szövetségi kapitányi megbízás azonosítója, ez a kulcs                                                                          |
+| kapitanyokid | int     | Annak a szövetségi kapitánynak vagy válogató bizottságnak az azonosítója, akit megbíztak egy időre a válogatott összeállításával |
+| elso         | int     | A mérkőzés azonosítója, egyúttal sorszáma, amelyen a megbízás először érvényes volt                                              |
+| utolso       | int     | A mérkőzés azonosítója, egyúttal sorszáma, amelyen a megbízás utoljára érvényes volt                                             |
 
 **`kapitanyok`** (id, nev, szuletett, elhunyt)
-| Név       | Típus   | Leírás                                                               |
-| :-------: | :-----: | -------------------------------------------------------------------- |
-| id        | int     | A szövetségi kapitány azonosítója, ez a kulcs                        |
-| nev       | varchar | A szövetségi kapitány neve, aki a magyar válogatottat összeállította |
-| szuletett | int     | A szövetségi kapitány születési éve                                  |
-| elhunyt   | int     | A szövetségi kapitány halálozási éve                                 |
+| Név          | Típus   | Leírás                                                               |
+| ------------ | ------- | -------------------------------------------------------------------- |
+| id           | int     | A szövetségi kapitány azonosítója, ez a kulcs                        |
+| nev          | varchar | A szövetségi kapitány neve, aki a magyar válogatottat összeállította |
+| szuletett    | int     | A szövetségi kapitány születési éve                                  |
+| elhunyt      | int     | A szövetségi kapitány halálozási éve                                 |
 
 ### Az adatbázis diagramja
 ![táblák](diagram.png)
