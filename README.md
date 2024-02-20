@@ -5,7 +5,7 @@ szövetségi kapitány. Ebben az adatbázisban a 2016-os Európa-bajnokság vég
 szerepelnek a magyar válogatott mérkőzései és szövetségi kapitányai. 
 
 ## 1. feladat
-Futtassa a `Valogatott.sql` fájlt!
+Futtassa a `Valogatott.sql` fájlt az adatbázis létrehozásához!
 
 ### Táblák
 
