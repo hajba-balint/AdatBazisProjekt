@@ -12,7 +12,7 @@ Futtassa a `Valogatott.sql` fájlt az adatbázis létrehozásához!
 **`merkozesek`** (id, datum, ido, varos, stadion, nezoszam, ellenfel, lott, kapott, tetmeccs)
 | Név          | Típus   | Leírás                                                     |
 | ------------ | ------- | ---------------------------------------------------------- |
-| id           | int     | A mérkőzés azonosítója, ez a kulcs                         |
+| id           | int     | A mérkőzés azonosítója (elsődleges kulcs)                  |
 | datum        | date    | A mérkőzés dátuma                                          |
 | ido          | time    | A mérkőzés kezdési ideje                                   |
 | varos        | varchar | A város, ahol a mérkőzést játszották                       |
@@ -24,17 +24,17 @@ Futtassa a `Valogatott.sql` fájlt az adatbázis létrehozásához!
 | tetmeccs     | varchar | Megadja, hogy a mérkőzés milyen tétmeccs volt              |
 
 **`megbizasok`** (id, kapitanyid, elso, utolso)
-| Név          | Típus   | Leírás                                                                                                                           |
-| ------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| id           | int     | A szövetségi kapitányi megbízás azonosítója, ez a kulcs                                                                          |
-| kapitanyokid | int     | Annak a szövetségi kapitánynak vagy válogató bizottságnak az azonosítója, akit megbíztak egy időre a válogatott összeállításával |
-| elso         | int     | A mérkőzés azonosítója, egyúttal sorszáma, amelyen a megbízás először érvényes volt                                              |
-| utolso       | int     | A mérkőzés azonosítója, egyúttal sorszáma, amelyen a megbízás utoljára érvényes volt                                             |
+| Név          | Típus   | Leírás                                                                                                                                          |
+| ------------ | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| id           | int     | A szövetségi kapitányi megbízás azonosítója, (elsődleges kulcs)                                                                                 |
+| kapitanyokid | int     | Annak a szövetségi kapitánynak vagy válogató bizottságnak az azonosítója, akit megbíztak egy időre a válogatott összeállításával (idegen kulcs) |
+| elso         | int     | A mérkőzés azonosítója, egyúttal sorszáma, amelyen a megbízás először érvényes volt (idegen kulcs)                                              |
+| utolso       | int     | A mérkőzés azonosítója, egyúttal sorszáma, amelyen a megbízás utoljára érvényes volt (idegen kulcs)                                             |
 
 **`kapitanyok`** (id, nev, szuletett, elhunyt)
 | Név          | Típus   | Leírás                                                               |
 | ------------ | ------- | -------------------------------------------------------------------- |
-| id           | int     | A szövetségi kapitány azonosítója, ez a kulcs                        |
+| id           | int     | A szövetségi kapitány azonosítója, elsődleges kulcs                  |
 | nev          | varchar | A szövetségi kapitány neve, aki a magyar válogatottat összeállította |
 | szuletett    | int     | A szövetségi kapitány születési éve                                  |
 | elhunyt      | int     | A szövetségi kapitány halálozási éve                                 |
@@ -45,16 +45,16 @@ Futtassa a `Valogatott.sql` fájlt az adatbázis létrehozásához!
 ## 2. feladat
 Az adatbázis elkészítése óta játszódott egy meccs. Bővítse a **`merkozesek`** táblát az alábbi focimeccs adataival!
 
-`id: 910,`
-`datum: 2016.09.06,`
-`ido: null,`
-`varos: Tórshavn,`
-`stadion: Tórsvøllur,`
-`nezoszam: 15000,`
-`ellenfel: Feröer,`
-`lott: 0,`
-`kapott: 0,`
-`tetmeccs: VB-sel-2016`
+`id: 910`,
+`datum: 2016.09.06`,
+`ido: null`,
+`varos: Tórshavn`,
+`stadion: Tórsvøllur`,
+`nezoszam: 15000`,
+`ellenfel: Feröer`,
+`lott: 0`,
+`kapott: 0`,
+`tetmeccs: VB-sel-2016`,
 
 ## 3. feladat
 A 2. feladatban lévő meccs lejátszása után adtak mégegy pontot a magyar válogatottnak.

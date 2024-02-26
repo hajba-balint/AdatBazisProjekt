@@ -21,7 +21,7 @@ WHERE tetmeccs LIKE '%vb%';
 SELECT nev
 FROM kapitanyok
   INNER JOIN  megbizasok
-    ON kapitanyok.id = megbizasok.kapitanyokid
+    ON kapitanyok.id = megbizasok.kapitanyid
 WHERE megbizasok.elso<500 AND megbizasok.utolso>500;
 
 -- 7. feladat:
@@ -40,8 +40,8 @@ FROM merkozesek
 WHERE lott>kapott;
 
 -- 10. feladat:
-SELECT datum, ellenfel, lott, kapott, kapitanyokid
+SELECT datum, ellenfel, lott, kapott, kapitanyid
 FROM merkozesek
   INNER JOIN megbizasok
-  ON kapitanyokid=3
+  ON kapitanyid=3
 WHERE datum <= elso AND datum >= utolso;
