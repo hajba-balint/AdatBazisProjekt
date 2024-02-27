@@ -21,7 +21,7 @@ CREATE TABLE merkozesek (
 
 CREATE TABLE megbizasok (
   id int(11),
-  kapitanyokid int(11),
+  kapitanyid int(11),
   elso int(11),
   utolso int(11)
 );
@@ -945,7 +945,7 @@ ALTER TABLE merkozesek ADD PRIMARY KEY(id);
 ( 908,"2016-06-22","18:00:00","Lyon","Stade des Lumiéres",55514,"Portugália",3,3,"EB-2016"),
 ( 909,"2016-06-26","21:00:00","Toulouse","Stadium Municipal",38921,"Belgium",0,4,"EB-2016");
 
-ALTER TABLE megbizasok ADD INDEX(kapitanyokid);
+ALTER TABLE megbizasok ADD INDEX(kapitanyid);
 ALTER TABLE megbizasok ADD PRIMARY KEY(id);
 
 INSERT INTO megbizasok VALUES
@@ -1075,6 +1075,4 @@ ALTER TABLE kapitanyok ADD PRIMARY KEY(id);
 ( 52,"VB - Sebes, Kléber, Mandik",null,null),
 ( 53,"Verebes József",1941,2016);
 
-
-ALTER TABLE `megbizasok` ADD CONSTRAINT `megbizasok_1` FOREIGN KEY (`kapitanyokid`) REFERENCES `kapitanyok` (`id`);
-
+ALTER TABLE `megbizasok` ADD CONSTRAINT `megbizas_1` FOREIGN KEY (`kapitanyid`) REFERENCES `kapitanyok` (`id`);
